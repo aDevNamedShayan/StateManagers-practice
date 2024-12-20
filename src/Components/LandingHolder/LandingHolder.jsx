@@ -1,6 +1,7 @@
 import React from "react";
 import { ContextAPI } from "./LandingComponents/ContextAPISection/ContextAPI";
 import { ZustandSection } from "./LandingComponents/ZustandSection/ZustandSection";
+import { ReduxSection } from "./LandingComponents/zzReduxSection/ReduxSection";
 
 const LandingHolder = () => {
   return (
@@ -11,6 +12,8 @@ const LandingHolder = () => {
       <ContextAPI />
       <div className="w-full border-4 border-gray-500 mt-10"></div>
       <ZustandSection />
+      <div className="w-full border-4 border-gray-500 mt-10"></div>
+      <ReduxSection />
     </div>
   );
 };
