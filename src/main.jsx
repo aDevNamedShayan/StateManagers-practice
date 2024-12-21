@@ -9,7 +9,7 @@ const App = lazy(() => import("./App/App"));
 
 createRoot(document.getElementById("root")).render(
   <Suspense fallback={<FullPageLoading />}>
-    <Provider>
+    <Provider store={store}>
       <App />
     </Provider>
   </Suspense>

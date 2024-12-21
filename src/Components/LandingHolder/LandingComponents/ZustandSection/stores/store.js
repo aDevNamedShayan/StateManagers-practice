@@ -16,16 +16,16 @@ export const useCountStore = create((set) => ({
         const data = await new Promise((resolve) => setTimeout(resolve, 1000))
         set((state) => ({ count: state.count - 1 }))
     },
-    studentName: "آقا رضا",
+    studentName: "رضا",
 }))
 // moved studentName from the below store VV to the above store ^^ because it is used is the same component as count
 // export const useNameStore = create((set) => ({
 // }));
 
 export const useHeaderStore = create(() => ({
-    headerTxt: "گودرت زوستند💪"
+    headerTxt: "زوستند💪"
 }))
 
 export const useFriendsStore = create(() => ({
-    Friends: "نتانیاهو🦸‍♂️"
+    Friends: "John Doe"
 }))
