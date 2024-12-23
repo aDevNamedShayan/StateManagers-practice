@@ -19,13 +19,24 @@ const counterSlice = createSlice({
         builder.addCase(incrementAsync.fulfilled, (state, action) => {
             state.value += action.payload
         })
+        .addCase(decrementAsync.fulfilled, (state, action) => {
+            state.value -= action.payload
+        })
     }
 })
 
 export const incrementAsync = createAsyncThunk(
-    'AsyncCounter',
+    'AsyncIncrement',
     async (amount) => {
         await new Promise((resolve) => setTimeout(resolve, 1000));
+        return amount;
+    }
+)
+
+export const decrementAsync = createAsyncThunk(
+    'AsyncDecrement',
+    async (amount) => {
+        await new Promise((resolve) => setTimeout(resolve, 1000))
         return amount;
     }
 )

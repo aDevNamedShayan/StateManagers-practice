@@ -1,5 +1,5 @@
 import { useDispatch } from 'react-redux'
-import { decrement, increment, incrementAsync } from '../../redux/slices/counterSlice'
+import { decrement, decrementAsync, increment, incrementAsync } from '../../redux/slices/counterSlice'
 
 export const ContextCom12 = () => {
   const dispatch = useDispatch()
@@ -10,7 +10,7 @@ export const ContextCom12 = () => {
       <button className='btn-outline p-2' onClick={() => dispatch(increment())}>➕</button>
       <button className='btn-outline p-2' onClick={() => dispatch(decrement())}>➖</button>
       <button className='btn-outline p-2' onClick={() => dispatch(incrementAsync(1))}>بده 1</button>
-      <button className='btn-outline p-2' onClick={""}>بده معکوس</button>
+      <button className='btn-outline p-2' onClick={() => dispatch(decrementAsync(1))}>بده معکوس</button>
     </div>
   )
 }
